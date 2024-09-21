@@ -8,21 +8,24 @@ body {
 }
 
 header {
-    background-color: #2a2a2a; /* Dark grey header */
-    color: #fff; /* White text */
+    background-color: #f4f4f4; /* Light grey header */
+    color: #000; /* Black text */
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed; /* Fix the header to the top */
-    top: 0; /* Stick the header to the top */
-    width: 100%; /* Make the header span the full width of the page */
-    z-index: 1000; /* Ensure the header stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of nav items */
 }
 
 body {
-    padding-top: 70px; /* Add padding to avoid content hiding under the header */
+    padding-top: 70px; /* Avoid content hiding under the header */
+    overflow-y: auto; /* Ensure vertical scrolling if needed */
 }
 
 .logo-container {
@@ -314,6 +317,52 @@ iframe {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Media Queries for Small Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Adjust header padding */
+    }
+
+    main {
+        width: 95%; /* Increase width for smaller screens */
+        margin: 10px; /* Reduce margin */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reduce margin for navigation */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+/* Media Queries for Extra Small Devices */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0; /* Further reduce header padding */
+    }
+
+    main {
+        width: 100%; /* Full width on extra small screens */
+        margin: 5px; /* Reduce margin */
+    }
+
+    h1 {
+        font-size: 20px; /* Further adjust heading size */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+
 
 /* Keyframes for fade-in effect */
 @keyframes fadeIn {
