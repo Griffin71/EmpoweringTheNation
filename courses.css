@@ -170,6 +170,52 @@ footer p {
         width: 80%;
     }
 }
+
+/* Media Queries for Small Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Adjust header padding */
+    }
+
+    main {
+        width: 95%; /* Increase width for smaller screens */
+        margin: 10px; /* Reduce margin */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reduce margin for navigation */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+/* Media Queries for Extra Small Devices */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0; /* Further reduce header padding */
+    }
+
+    main {
+        width: 100%; /* Full width on extra small screens */
+        margin: 5px; /* Reduce margin */
+    }
+
+    h1 {
+        font-size: 20px; /* Further adjust heading size */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
